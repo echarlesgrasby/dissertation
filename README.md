@@ -1,5 +1,15 @@
 # dissertation
-An evolving repository of my doctoral dissertation
+An evolving repository of my doctoral dissertation on information quality, language engineering, and electricity market monitoring.
+
+The following chapters are listed below: 
+
+1. Introduction
+2. Literature Review
+3. Appendices
+   * IRB Certificates
+   * Search Queries For Literature Review
+   * Schedule of Dissertation Milestones
+   * Public Market Data Sources
 
 ## "License"
 
