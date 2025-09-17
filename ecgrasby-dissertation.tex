@@ -36,6 +36,8 @@
 %This package allows for the use of graphics in the
 %document.
 \usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{afterpage}
 
 %If you have JPEG format images, add .jpg as an
 %allowed file extension below. Same for Bitmaps (.bmp).
@@ -75,13 +77,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % End preamble. Document begins below.
-
 \begin{document}
 
 %The title of your document goes here.
 %Spacing may need to be adjusted if your title is long
 %and pushes the copyright off the page.
-\renewcommand{\tamumanuscripttitle}{A System to Support Monitoring and Surveillance Operations Within a Wholesale Electricity Market}
+\renewcommand{\tamumanuscripttitle}{A Domain-Specific Language Approach to Support Monitoring and Surveillance Within Wholesale Electricity Markets}
 
 
 %Type only Thesis, Dissertation, or Record of Study.
@@ -112,8 +113,8 @@
 \include{data/titlepage} % This is simply a file that formats and adds your titlepage, please do not edit this unless you have a specific need. .
 \include{data/approval_page}
 \include{data/abstract}
-\include{data/dedication}
-\include{data/acknowledgements}
+%\include{data/dedication}%
+%\include{data/acknowledgements}%
 %\include{data/contributors}
 \include{data/nomenclature}
 
@@ -121,9 +122,13 @@
 
 %This section includes the individual chapters
 \include{data/section1}
-\include{data/section2}
-\include{data/section3}
+\include{data/section2_redux}
+\include{data/section3_proposal_only}
+%\include{data/section3}
 %\include{data/section4}
+%\include{data/section5}
+%\include{data/section6}
+%\include{data/section9}
 
 %The next line is the format for inserting new sections.
 %Replace the name "newsection"  with the name of your
@@ -141,17 +146,24 @@
 %hosted by the University of Vienna, shows several
 %bibliography styles and examples of in-text citation
 %and a references page.
-\bibliographystyle{ieeetr}
+%\bibliographystyle{ieeetr}
 
 \phantomsection
-\addcontentsline{toc}{chapter}{REFERENCES}
+\addcontentsline{toc}{chapter}{\numberline{4.}REFERENCES}
 
 \renewcommand{\bibname}{{\normalsize\rm REFERENCES}}
 
 %This file is a .bib database that contains the sources.
 %This removes the dependency on the previous file
 %bibliography.tex.
+
+\begingroup
+\fussy
+\raggedright
+\bibliographystyle{ieeetr}
 \bibliography{data/myReference}
+\endgroup
+
 
 
 
